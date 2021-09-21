@@ -1,0 +1,29 @@
+<ion-app>
+
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="success">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item >
+          <ion-button (click)="ocultarMenu()" 
+                      routerLink ="/formulario" 
+                      icon="bug-outline" 
+                      fill="clear"
+                      shape="round"
+                      size="large"
+                      class="fondo">
+            <ion-icon slot="start" name="menu-outline" class="texto"></ion-icon>
+            <ion-label class="texto">Iniciar Sesion</ion-label>            
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

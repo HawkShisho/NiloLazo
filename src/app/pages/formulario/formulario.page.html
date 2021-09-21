@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Iniciar sesion</ion-title>
+    <ion-avatar routerLink="/inicio" slot="end" class="ion-padding">
+      <img src="/assets/manzana.jpg"/>
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+<!--
+    <ion-list-header>
+      <ion-label>Formulario Válido: {{formulario.valid}} </ion-label>
+    </ion-list-header>
+-->
+    <ion-item>
+      <ion-label>Email: </ion-label>
+      <ion-input type="email" placeholder="Email"
+                 name="email" [(ngModel)]= "usuario.email"
+                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Contraseña: </ion-label>
+      <ion-input type="password" placeholder="Contraseña"
+                 name="password" [(ngModel)]= "usuario.password"
+                 required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dirección:</ion-label>
+      <ion-input placeholder="Ingrese dirección"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pregunta de seguridad:</ion-label>
+      <ion-input placeholder="Ingrese pregunta"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Respuesta:</ion-label>
+      <ion-input placeholder="Ingrese respuesta"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-item>
+        <ion-label>Fecha nacimiento<br> (Click para seleccionar)</ion-label>
+        <ion-datetime display-format="DD.MM.YYYY"></ion-datetime>
+      </ion-item>
+    </ion-item>
+    <ion-button 
+      [disabled] ="formulario.invalid"
+      type="submit" 
+      expand="block"
+      routerLink ="/inicio"
+      color="success">
+      Enviar datos
+    </ion-button>
+
+  </form>
+</ion-content>

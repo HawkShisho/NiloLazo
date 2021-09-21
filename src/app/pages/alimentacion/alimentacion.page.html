@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Alimentacion saludable</ion-title>
+    <ion-avatar routerLink="/inicio" slot="end" class="ion-padding">
+      <img src="/assets/manzana.jpg"/>
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label class="titulo">Desayuno</ion-label>
+    </ion-item>
+    <ion-button style="width : 100% ; height : 100%" fill="clear" 
+    routerLink="/alimentacion/desayuno">
+      <img src="/assets/desayuno.jpg" class="imagen">
+    </ion-button>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label class="titulo">Almuerzo</ion-label>
+    </ion-item>
+    <ion-button style="width : 100% ; height : 100%" fill="clear" 
+    routerLink="/alimentacion/almuerzo">
+      <img src="/assets/almuerzo.jpg" class="imagen">
+    </ion-button>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label class="titulo">Cena</ion-label>
+    </ion-item>
+    <ion-button style="width : 100% ; height : 100%" fill="clear"
+    routerLink="/alimentacion/cena">
+      <img src="/assets/cena.jpg" class="imagen">
+    </ion-button>
+  </ion-list>
+
+</ion-content>
+}
