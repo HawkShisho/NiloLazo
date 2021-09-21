@@ -1,2 +1,0 @@
-# NiloLazo
-Proyecto BienestarApp
